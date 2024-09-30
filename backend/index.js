@@ -10,7 +10,7 @@ const app = express();
 dotenv.config();
 app.use(
   cors({
-    origin: "https://image-uploads-awni.vercel.app/", // Replace with your Vercel URL
+    origin: "*", // Replace with your Vercel URL
   })
 );
 app.use(express.json());

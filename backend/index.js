@@ -8,7 +8,11 @@ const Image = require("./model/index");
 
 const app = express();
 dotenv.config();
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://image-uploads-awni.vercel.app/", // Replace with your Vercel URL
+  })
+);
 app.use(express.json());
 
 const PORT = process.env.BACKEND_PORT || 3000;
